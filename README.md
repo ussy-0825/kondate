@@ -19,7 +19,7 @@
 | cooking_name           | string     | null: false                    |
 | ingredient             | text       | null: false                    |
 | process                | text       | null: false                    |
-| time_id                | integer    | null: false                    |
+| cook_time_id           | integer    | null: false                    |
 | genre_id               | integer    | null: false                    |
 | side_dishes_id         | integer    | null: false                    |
 | user                   | references | null: false, foreign_key: true |
