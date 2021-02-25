@@ -1,0 +1,15 @@
+<h1>献立カレンダー</h2>
+
+<%#= render 'simple_calendar/month_calendar' %>
+<%= month_calendar events: @menus do |date, all| %>
+<%#= month_calendar (attribute: :cook_date, events: @menus, number_of_weeks: 2) do |date, all| %>
+  <%= date.day %>
+  <% all.each do |i| %>
+    <div>
+      <%= i.main %>
+      <%= i.sub_one %>
+      <%= i.sub_two %>
+      <%= i.soup %>
+    </div>
+  <% end %>
+<% end %>
