@@ -6,7 +6,11 @@ class RecipesController < ApplicationController
 
   def create
     @recipe = Recipe.new(recipe_params)
-    @recipe.save
+    if @recipe.save
+      redirect_to root_path
+    else
+      render :create
+    end
   end
 
   private
