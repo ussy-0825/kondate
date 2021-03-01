@@ -1,2 +1,12 @@
 <%= render "shared/header" %>
-
+<% if user_signed_in? %>
+  <ul>
+    <li><%= link_to 'レシピの編集', edit_recipe_path(@recipe.id) %></li>
+    <li><%= link_to 'レシピの削除', '#' %></li>
+  </ul>
+<% end %>
+<h1><%= @recipe.cooking_name %></h1>
+<h2>材料・調味料</h2>
+<%= @recipe.ingredient %>
+<h2>作り方</h2>
+<%= @recipe.process %>

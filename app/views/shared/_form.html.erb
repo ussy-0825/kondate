@@ -1,0 +1,30 @@
+<%= form_with model: @recipe, local: true do |f| %>
+  <div>
+    料理名
+    <%= f.text_field :cooking_name %>
+  </div>
+  <div>
+    必要な材料・調味料
+    <%= f.text_area :ingredient %>
+  </div>
+  <div>
+    作り方
+    <%= f.text_area :process %>
+  </div>
+  <div>
+    ジャンル
+    <%= f.collection_select(:genre_id, Genre.all, :id, :name, {} )%>
+  </div>
+  <div>
+    調理時間
+    <%= f.collection_select(:cook_time_id, CookTime.all, :id, :name, {} )%>
+  </div>
+  <div>
+    おかずの種類
+    <%= f.collection_select(:side_dishes_id, SideDishes.all, :id, :name, {} )%>
+  </div>
+  <div>
+    <%= f.submit "レシピを投稿する" %>
+  </div>
+
+<% end %>
