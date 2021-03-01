@@ -21,17 +21,19 @@ class MenusController < ApplicationController
   private
   
   def cook_date_params
-  params.require(:menu).permit(:cook_date).merge(user_id: current_user.id)
+  params.require(:menu).permit(:cook_date, recipe_ids:[]).merge(user_id: current_user.id)
   end
 
   def create_menu
-    main_name = Recipe.where(side_dishes_id: 2).pluck(:cooking_name)
-    @menu["main"] = main_name.sample
-    sub_one_name = Recipe.where(side_dishes_id: 3).pluck(:cooking_name)
-    @menu["sub_one"] = sub_one_name.sample
-    sub_two_name = Recipe.where(side_dishes_id: 3).pluck(:cooking_name)
-    @menu["sub_two"] = sub_two_name.sample
-    soup_name = Recipe.where(side_dishes_id: 4).pluck(:cooking_name)
-    @menu["soup"] = soup_name.sample
+    dish = @menu.recipe_ids
+    main_name = Recipe.where(id: dish.first).pluck(:cooking_name)
+    @menu[:main] = main_name[0]
+    sub_one_name = Recipe.where(id: dish.second).pluck(:cooking_name)
+    @menu[:sub_one] = sub_one_name[0]
+    sub_two_name = Recipe.where(id: dish.third).pluck(:cooking_name)
+    @menu[:sub_two] = sub_two_name[0]
+    soup_name = Recipe.where(id: dish.fourth).pluck(:cooking_name)
+    @menu[:soup] = soup_name[0]
   end
+
 end

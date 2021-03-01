@@ -1,7 +1,9 @@
 class Recipe < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :genre, :cook_time, :side_dishes
-  has_many :menus
+
+  has_many :menus_recipes
+  has_many :menus, through: :menus_recipes
 
   with_options presence: true do
   validates :cooking_name, :ingredient, :process, :user_id

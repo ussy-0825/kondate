@@ -4,7 +4,7 @@ class Menu < ApplicationRecord
     self.cook_date
   end
 
-  has_many :recipes
-  
+  has_many :menus_recipes
+  has_many :recipes, through: :menus_recipes
   
 end

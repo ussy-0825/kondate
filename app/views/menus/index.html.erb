@@ -1,3 +1,8 @@
+<%= render  "shared/header" %>
+
+<%= link_to '献立を立てる', new_menu_path %>
+<%= link_to 'レシピを投稿する', new_recipe_path %>
+
 <h1>献立カレンダー</h2>
 
 <%#= render 'simple_calendar/month_calendar' %>
@@ -6,10 +11,24 @@
   <%= date.day %>
   <% all.each do |i| %>
     <div>
-      <%= i.main %>
-      <%= i.sub_one %>
-      <%= i.sub_two %>
-      <%= i.soup %>
+      <ul>
+      <% num = Recipe.where(cooking_name: i.main) %>
+      <% num = num.pluck(:id)%>
+      <% num[0]%>
+      <li><%= link_to i.main, recipe_path(num) %></li>
+      <% num = Recipe.where(cooking_name: i.sub_one) %>
+      <% num = num.pluck(:id)%>
+      <% num[0]%>
+      <li><%= link_to i.sub_one, recipe_path(num) %></li>
+      <% num = Recipe.where(cooking_name: i.sub_two) %>
+      <% num = num.pluck(:id)%>
+      <% num[0]%>
+      <li><%= link_to i.sub_two, recipe_path(num) %></li>
+      <% num = Recipe.where(cooking_name: i.soup) %>
+      <% num = num.pluck(:id)%>
+      <% num[0]%>
+      <li><%= link_to i.soup, recipe_path(num) %></li>
+      </ul>
     </div>
   <% end %>
 <% end %>

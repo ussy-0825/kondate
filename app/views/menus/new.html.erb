@@ -1,12 +1,42 @@
+<%= render "shared/header" %>
+
 <%= form_with(model: @menu, local: true) do |form| %>
 
-  <div class="time">
+  <div>
     <%= form.label :cook_date %>
     <%= form.date_select :cook_date %>
   </div>
+
+  
+  <select name="menu[recipe_ids][]">
+    <option value="">主菜は何にしますか？</option>
+    <% Recipe.where(side_dishes_id: 2).each do |dishe| %>
+      <option value=<%=dishe.id%>><%= dishe.cooking_name %></option>
+      <% end %>
+  </select>
+  <select name="menu[recipe_ids][]">
+      <option value="">福菜は何にしますか？</option>
+    <% Recipe.where(side_dishes_id: 3).each do |dishe| %>
+      <option value=<%=dishe.id%>><%= dishe.cooking_name %></option>
+    <% end %>
+  </select>
+  <select name="menu[recipe_ids][]">
+      <option value="">福菜は何にしますか？</option>
+    <% Recipe.where(side_dishes_id: 3).each do |dishe| %>
+      <option value=<%=dishe.id%>><%= dishe.cooking_name %></option>
+    <% end %>
+  </select>
+  <select name="menu[recipe_ids][]">
+      <option value="">汁物は何にしますか？</option>
+    <% Recipe.where(side_dishes_id: 4).each do |dishe| %>
+      <option value=<%=dishe.id%>><%= dishe.cooking_name %></option>
+    <% end %>
+  </select>
 
   <div class="submit">
     <%= form.submit %>
   </div>
 
 <% end %>
+
+<%= link_to 'カレンダーに戻る', root_path %>
