@@ -1,4 +1,6 @@
 class MenusController < ApplicationController
+  before_action :authenticate_user!,  except:[:index]
+  before_action :access_check, only:[:edit, :update]
 
   def index
     @menus = Menu.all
@@ -34,6 +36,13 @@ class MenusController < ApplicationController
     @menu[:sub_two] = sub_two_name[0]
     soup_name = Recipe.where(id: dish.fourth).pluck(:cooking_name)
     @menu[:soup] = soup_name[0]
+  end
+
+  def access_check
+    author = Recipe.find(params[:id])
+    if current_user.id != author.user_id
+      redirect_to root_path
+    end
   end
 
 end

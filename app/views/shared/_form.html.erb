@@ -1,7 +1,13 @@
 <%= form_with model: @recipe, local: true do |f| %>
+
+<%= render "shared/error_message", model: f.object %>
   <div>
     料理名
     <%= f.text_field :cooking_name %>
+  </div>
+  <div>
+    写真
+    <%= f.file_field :image %>
   </div>
   <div>
     必要な材料・調味料

@@ -1,4 +1,6 @@
 class RecipesController < ApplicationController
+  before_action :authenticate_user!,  except:[:show]
+  before_action :access_check, only:[:edit, :update]
 
   def new
     @recipe = Recipe.new
@@ -9,7 +11,7 @@ class RecipesController < ApplicationController
     if @recipe.save
       redirect_to root_path
     else
-      render :create
+      render :new
     end
   end
 
@@ -33,7 +35,14 @@ class RecipesController < ApplicationController
   private
 
   def recipe_params
-    params.require(:recipe).permit(:cooking_name, :ingredient, :process, :genre_id, :cook_time_id, :side_dishes_id).merge(user_id: current_user.id )
+    params.require(:recipe).permit(:image, :cooking_name, :ingredient, :process, :genre_id, :cook_time_id, :side_dishes_id).merge(user_id: current_user.id )
+  end
+
+  def access_check
+    author = Recipe.find(params[:id])
+    if current_user.id != author.user_id
+      redirect_to root_path
+    end
   end
 
 end
