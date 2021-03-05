@@ -1,9 +1,9 @@
 class MenusController < ApplicationController
-  before_action :authenticate_user!,  except:[:index]
+  before_action :authenticate_user!
   before_action :access_check, only:[:edit, :update]
 
   def index
-    @menus = Menu.all
+      @menus = Menu.where(user_id: current_user.id)
   end
 
   def new
