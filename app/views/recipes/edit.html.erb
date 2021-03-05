@@ -1,34 +1,8 @@
-<h1>レシピ編集フォーム</h1>
-<p style="color: red;">料理名を変更することはできません</p>
-<%= form_with model: @recipe, local: true do |f| %>
-<%= render "shared/error_message", model: f.object %>
-  <div>
-    写真
-    <%= f.file_field :image %>
+<%= render  "shared/header" %>
+<div class="content">
+  <div class="form-title">
+    <h1>レシピ編集フォーム</h1>
   </div>
-  <div>
-    必要な材料・調味料
-    <%= f.text_area :ingredient %>
-  </div>
-  <div>
-    作り方
-    <%= f.text_area :process %>
-  </div>
-  <div>
-    ジャンル
-    <%= f.collection_select(:genre_id, Genre.all, :id, :name, {} )%>
-  </div>
-  <div>
-    調理時間
-    <%= f.collection_select(:cook_time_id, CookTime.all, :id, :name, {} )%>
-  </div>
-  <div>
-    おかずの種類
-    <%= f.collection_select(:side_dishes_id, SideDishes.all, :id, :name, {} )%>
-  </div>
-  <div>
-    <%= f.submit "レシピを投稿する" %>
-  </div>
-<% end %>
-
-<%= link_to 'カレンダーに戻る', root_path%>
+  <%= render "shared/form" %> 
+</div>
+<%= render  "shared/footer" %>

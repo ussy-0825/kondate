@@ -1,0 +1,22 @@
+.footer {
+  height: 100px;
+  background-color: #f6bfbc;
+}
+
+.footer-list {
+  display: flex;
+  list-style: none;
+  padding-top: 40px;
+  width: 500px;
+  margin: 0 auto;
+}
+
+.footer-list li {
+  width: 100px;
+  height: 30px;
+  text-align: center;
+}
+
+.link-name {
+  text-decoration: none;
+}

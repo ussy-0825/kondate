@@ -1,12 +1,31 @@
 <%= render "shared/header" %>
-<% if user_signed_in? %>
-  <ul>
-    <li><%= link_to 'レシピの編集', edit_recipe_path(@recipe.id) %></li>
-  </ul>
-<% end %>
-<%= image_tag @recipe.image.variant(resize: '500x500')  if @recipe.image.attached? %>
-<h1><%= @recipe.cooking_name %></h1>
-<h2>材料・調味料</h2>
-<%= @recipe.ingredient %>
-<h2>作り方</h2>
-<%= @recipe.process %>
+  <div class="edit-content">
+    <div class="edit-box">
+      <% if user_signed_in? %>
+        <div class="recipe-edit-btn">
+          <%= link_to 'レシピの編集', edit_recipe_path(@recipe.id), style: "text-decoration:none;" %>
+        </div>
+      <% end %>
+    </div>
+    <div class="edit-text">
+      <div class="edit-form edit-name">
+        <h1><%= @recipe.cooking_name %></h1>
+      </div>
+      <div class="edit-img"> 
+        <%= image_tag @recipe.image.variant(resize: '500x500')  if @recipe.image.attached? %>
+      </div>
+      <div class="edit-form edit-ingredient">
+        <h2>材料・調味料</h2>
+      </div>
+      <div class="edit-from edit-ingredient-text">
+        <%= @recipe.ingredient %>
+      </div>
+      <div class="edit-form edit-process">
+        <h2>作り方</h2>
+      </div>
+      <div class="edit-form edit-process-text">
+        <%= @recipe.process %>
+      </div>  
+    </div>
+  </div>
+<%= render  "shared/footer" %>

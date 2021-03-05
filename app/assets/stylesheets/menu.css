@@ -1,0 +1,43 @@
+.main {
+  background-color: #fef4f4;
+}
+
+.menu-title {
+  height: 40px;
+  margin-left: 30px;
+  font-size: 20px;
+  font-family: 'ヒラギノ丸ゴ ProN','Hiragino Maru Gothic ProN','Yu Gothic UI','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',sans-serif;
+}
+
+.menu-recipe {
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.menu-make, .recipe-make {
+  margin: 0 20px;
+  padding: 20px;
+  border: 1px solid black;
+}
+
+.menu, .recipe {
+  text-decoration: none;
+}
+
+.menu-day {
+  list-style: none;
+}
+
+.cook-name {
+  text-decoration: none;
+}
+
+.simple-calendar {
+  padding: 10px;
+}
+
+.calendar-heading {
+  padding-bottom: 10px;
+}

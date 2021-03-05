@@ -1,0 +1,20 @@
+.menu-new-content {
+  width: 100%;
+  background-color: #fef4f4;
+  height: calc(100vh - 200px);
+}
+
+.menu-make-form {
+  width: 400px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.menu-input {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.submit {
+  text-align: center;
+}

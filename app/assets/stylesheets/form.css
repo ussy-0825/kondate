@@ -1,0 +1,33 @@
+.cook-form {
+  margin-bottom: 20px;
+  margin: 0 auto;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+.cook-form th,
+.cook-form td {
+  height: 50px;
+  border: 1px solid #ffffff;
+  line-height: 50px;
+  text-align: center;
+}
+
+.cook-form th {
+  background-color: #efab93;
+  width: 200px;
+}
+
+.cook-form td {
+  background-color: #f3f3f3
+  
+}
+
+.form-btn {
+  margin-bottom: 20px;
+  margin: 0 auto;
+  width: 200px;
+  padding: 20px 0;
+}

@@ -1,0 +1,33 @@
+
+.header {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f6bfbc
+}
+
+.app-name {
+  margin: 20px;
+}
+
+.head-user {
+  list-style: none;
+}
+
+.user-box {
+  display: flex;
+  justify-content: space-around;
+}
+
+.left-box, .right-box {
+  padding: 20px;
+  margin: 20px;
+  text-decoration: none;
+}
+
+.right-box {
+  border:1px solid black;
+}
+
+

@@ -1,0 +1,39 @@
+.edit-content {
+  width: 100vw;
+  background-color: #fef4f4;
+}
+
+.edit-box {
+  padding:20px 0;
+}
+
+.edit-img {
+  margin: 0 auto;
+  width: 500px;
+  padding-bottom: 20px;
+}
+
+.recipe-edit-btn {
+  width: 100px;
+  margin:0 auto;
+  background-color: #e6b422;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.edit-text {
+  text-align: center;
+}
+
+.edit-form {
+  padding: 20px 0;
+}
+
+.edit-name {
+  font-size: 25px;
+}
+
+.edit-ingredient,
+.edit-process {
+  font-size: 20px;
+}
