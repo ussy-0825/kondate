@@ -36,7 +36,9 @@
 .right-box,
 .login-box,
 .sign-in-box {
-  border:1px solid black;
+  border: none;
+  background-color: #f8f4e6;
+  border-radius: 10px;
 }
 
 

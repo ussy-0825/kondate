@@ -19,7 +19,9 @@
 .menu-make, .recipe-make {
   margin: 0 20px;
   padding: 20px;
-  border: 1px solid black;
+  border: none;
+  background-color: #ffffff;
+  border-radius: 10px;
 }
 
 .menu, 
