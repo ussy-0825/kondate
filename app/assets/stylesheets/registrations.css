@@ -1,0 +1,22 @@
+.registrations-content {
+    padding: 20px 0;
+    text-align: center;
+    background-color: #fef4f4;
+  }
+
+.registrations-text {
+  margin: 10px auto 20px;
+  padding: 15px 0;
+  background-color: #ffffff;
+  width: 600px;
+  border-radius: 10px;
+}
+
+
+.registrations-title,
+.email-box,
+.pass-box,
+.remember-box,
+.registrations-name {
+  margin-bottom: 10px;
+}

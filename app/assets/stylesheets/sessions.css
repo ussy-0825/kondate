@@ -1,0 +1,14 @@
+.session-content,
+.user-help {
+  padding: 20px 0;
+  text-align: center;
+  background-color: #fef4f4;
+}
+
+.session-title,
+.email-box,
+.pass-box,
+.remember-box,
+.registrations-name {
+  margin-bottom: 10px;
+}
