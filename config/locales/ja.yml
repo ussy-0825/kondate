@@ -3,6 +3,7 @@ ja:
     models:
       recipe: レシピ 
       menu: メニュー
+      user: ユーザー
     attributes:
       recipe:
         cooking_name: 料理名
@@ -18,3 +19,5 @@ ja:
         sub_one: 副菜
         sub_two: 副菜
         soup: 汁物
+      user:
+        name: 名前
