@@ -22,7 +22,8 @@
   border: 1px solid black;
 }
 
-.menu, .recipe {
+.menu, 
+.recipe {
   text-decoration: none;
 }
 
