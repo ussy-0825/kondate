@@ -9,24 +9,33 @@
 
 .app-name {
   margin: 20px;
+  padding: 2px;
+  background-color: #ffffff;
+  border-radius: 10px;
 }
 
 .head-user {
   list-style: none;
 }
 
-.user-box {
+.user-box,
+.not-user-box {
   display: flex;
   justify-content: space-around;
 }
 
-.left-box, .right-box {
+.left-box, 
+.right-box,
+.login-box,
+.sign-in-box {
   padding: 20px;
   margin: 20px;
   text-decoration: none;
 }
 
-.right-box {
+.right-box,
+.login-box,
+.sign-in-box {
   border:1px solid black;
 }
 

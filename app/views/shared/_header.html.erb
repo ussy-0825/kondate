@@ -1,17 +1,17 @@
 <div class="header">
-  <div class="app-name"><%= image_tag "/images/logo.png" %></div>
+  <div class="app-name"><%= link_to (image_tag "logo.png"), "/" %></div>
 
-  <div>
     <ul class="head-user">  
     <% if user_signed_in? %>
-    <div class="user-box">
-    <li><%= link_to "こんにちは、#{current_user.name}さん", root_path, class: "left-box" %>
-    <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "right-box" %></li>
+      <div class="user-box">
+        <li><%= link_to "こんにちは、#{current_user.name}さん", root_path, class: "left-box" %></li>
+        <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "right-box" %></li>
+      </div>
     <% else %>
-    <li><%= link_to 'ログイン', new_user_session_path, class: "left-box"%></li>
-    <li><%= link_to '新規登録', new_user_registration_path, class: "right-box" %></li>
+      <div class="not-user-box">
+        <li><%= link_to 'ログイン', new_user_session_path, class: "login-box" %></li>
+        <li><%= link_to '新規登録', new_user_registration_path, class: "sign-in-box" %></li>
+      </div>
     <% end %>
-    </div>
     <ul> 
-  </div>
 </div>
