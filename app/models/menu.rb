@@ -6,5 +6,9 @@ class Menu < ApplicationRecord
 
   has_many :menus_recipes
   has_many :recipes, through: :menus_recipes
-  
+
+  with_options presence: { message: 'を選択してください'} do
+    validates :main, :sub_one, :sub_two, :soup
+  end
+
 end

@@ -1,5 +1,6 @@
 <%= form_with model: @recipe, local: true do |f| %>
-<%= render "shared/error_message", model: f.object %>
+<%= render "devise/shared/error_messages", model: f.object %>
+
   <table class="cook-form">
     <tbody>
       <tr>

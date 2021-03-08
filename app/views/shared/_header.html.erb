@@ -1,7 +1,7 @@
 <div class="header">
   <div class="app-name"><%= link_to (image_tag "logo.png"), "/" %></div>
 
-    <ul class="head-user">  
+    <ul class="head-user">
     <% if user_signed_in? %>
       <div class="user-box">
         <li><%= link_to "こんにちは、#{current_user.name}さん", root_path, class: "left-box" %></li>

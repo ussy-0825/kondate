@@ -1,0 +1,20 @@
+ja:
+  activerecord:
+    models:
+      recipe: レシピ 
+      menu: メニュー
+    attributes:
+      recipe:
+        cooking_name: 料理名
+        ingredient: 材料・調味料
+        process: 作り方
+        genre_id: ジャンル
+        cook_time_id: 調理時間
+        side_dishes_id: おかずの種類
+        image: 写真
+        main: 主菜
+      menu:
+        main: メイン
+        sub_one: 副菜
+        sub_two: 副菜
+        soup: 汁物

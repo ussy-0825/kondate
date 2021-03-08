@@ -2,10 +2,13 @@
 
 <div class="menu-new-content">
  <%= form_with(model: @menu, local: true) do |form| %>
+
   <div class="menu-make-form">
     <div class="menu-input">
-      <%= form.label :cook_date %>
+      <%= form.label :献立の内容 %>
     </div>
+
+    <%= render "devise/shared/error_messages", model: form.object %>
 
     <div class="menu-input">
       <%= form.date_select :cook_date %>
