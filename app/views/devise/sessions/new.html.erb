@@ -3,6 +3,11 @@
   <h2 class="session-title">ログイン</h2>
 
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  
+  <%- flash.each do |name, msg| -%>
+    <%= content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String) %>
+  <%- end -%>
+
     <div class="field email-box">
       <%= f.label :メールアドレス, class: "mail-text" %><br />
       <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
