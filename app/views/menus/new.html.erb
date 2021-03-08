@@ -8,7 +8,7 @@
       <%= form.label :献立の内容 %>
     </div>
 
-    <%= render "devise/shared/error_messages", model: form.object %>
+    <%= render "shared/error_message", model: form.object %>
 
     <div class="menu-input">
       <%= form.date_select :cook_date %>
