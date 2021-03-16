@@ -18,13 +18,13 @@
         <h2>材料・調味料</h2>
       </div>
       <div class="edit-from edit-ingredient-text">
-        <%= @recipe.ingredient %>
+        <%= simple_format(@recipe.ingredient) %>
       </div>
       <div class="edit-form edit-process">
         <h2>作り方</h2>
       </div>
       <div class="edit-form edit-process-text">
-        <%= @recipe.process %>
+        <%= simple_format(@recipe.process) %>
       </div>  
     </div>
   </div>
