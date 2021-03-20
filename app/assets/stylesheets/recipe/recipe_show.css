@@ -23,6 +23,7 @@
 
 .edit-text {
   text-align: center;
+  padding-bottom: 20px;
 }
 
 .edit-form {
@@ -34,6 +35,13 @@
 }
 
 .edit-ingredient,
-.edit-process {
+.show-process {
   font-size: 20px;
+}
+
+.show-process-text {
+  width: 70%;
+  margin:0 auto;
+  background-color: #ffffff;
+  border-radius: 10px;
 }

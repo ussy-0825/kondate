@@ -20,10 +20,10 @@
       <div class="edit-from edit-ingredient-text">
         <%= safe_join(@recipe.ingredient.split("\n"),tag(:br)) %>
       </div>
-      <div class="edit-form edit-process">
+      <div class="edit-form show-process">
         <h2>作り方</h2>
       </div>
-      <div class="edit-form edit-process-text">
+      <div class="edit-form show-process-text">
         <%= safe_join(@recipe.process.split("\n"),tag(:br)) %>
       </div>  
     </div>
