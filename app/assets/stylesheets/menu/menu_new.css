@@ -92,8 +92,25 @@
   display: flex;
   justify-content: space-around;
   width: 70%;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .menu-data {
   width: 200px;
+  border: 1px solid gray;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 5px;
+  background-color: #ffffff;
+}
+
+.menu-title {
+  margin: 0 auto;
+  height: 30px;
+}
+
+#menu-list {
+  display: flex;
+  margin-top: 10px;
 }
