@@ -1,6 +1,7 @@
 if (document.URL.match( "/menus/new" )) {
   window.addEventListener("load", recipeSort);
   window.addEventListener("load", addMenu);
+  window.addEventListener("load", closeModal);
 }
 
 function recipeSort() {
@@ -57,9 +58,9 @@ function addMenu() {
     let menu = document.querySelectorAll(".menu-data");
     menu.forEach(function(list) {
       list.addEventListener('click', (e) => {
-      const menuData = e.currentTarget;
+      const selectMenu = e.currentTarget;
       let menuPalette = document.getElementById("menu-palette");
-      menuPalette.appendChild(menuData);
+      menuPalette.appendChild(selectMenu);
 
       let hideInput = document.getElementById("hide-input");
       let input = document.createElement('input');
@@ -67,8 +68,26 @@ function addMenu() {
       input.setAttribute("value", e.target.id);
       hideInput.appendChild(input);
       $("#modal-overlay").css('display','none');
-
+      let menuList = document.getElementById("menu-list");
+      let menuData = document.querySelectorAll(".menu-data");
+      while(menuList.lastChild){
+        menuList.removeChild(menuList.lastChild);
+      }
       });
+    });
+  });
+}
+
+function closeModal() {
+  const addMenuEvent = document.getElementById("menu-list");
+  addMenuEvent.addEventListener("mouseenter", () => {
+    $("#modal-close").unbind().click(function(){
+      $("#modal-overlay").css('display','none');
+        let menuList = document.getElementById("menu-list");
+        let menuData = document.querySelectorAll(".menu-data");
+        while(menuList.lastChild){
+          menuList.removeChild(menuList.lastChild);
+        }
     });
   });
 }
