@@ -20,6 +20,11 @@ class MenusController < ApplicationController
     end
   end
 
+  def sort
+    @recipe = Recipe.where(genre_id: params[:genre]).where(side_dishes_id: params[:sidedishes]).where(cook_time_id: params[:cooktime])
+    render :sort
+  end
+
   private
   
   def cook_date_params

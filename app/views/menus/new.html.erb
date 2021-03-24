@@ -1,7 +1,17 @@
+<div id="modal-overlay">
+  <div id="modal-content">
+    <p>写真をクリックして献立に追加する料理を選択してください</p>
+    <div id="menu-list"></div>
+    <p><a id="modal-close" class="button-link">閉じる</a></p>
+  </div>
+</div>
+
 <%= render "shared/header" %>
 
 <div class="menu-new-content">
- <%= form_with(model: @menu, local: true) do |form| %>
+<%= form_with(model: @menu, local: true) do |form| %>
+
+  <div id="hide-input"></div>
 
   <div class="menu-make-form">
     <div class="menu-input">
@@ -10,50 +20,45 @@
 
     <%= render "shared/error_message", model: form.object %>
 
-    <div class="menu-input">
-      <%= form.date_select :cook_date %>
-    </div>
+      <div class="menu-input">
+        <%= form.date_select :cook_date %>
+      </div>
 
-    <div class="menu-input">
-      <select name="menu[recipe_ids][]">
-        <option value="">主菜は何にしますか？</option>
-        <% Recipe.where(side_dishes_id: 2).each do |dishe| %>
-          <option value=<%=dishe.id%>><%= dishe.cooking_name %></option>
-          <% end %>
-      </select>
-    </div>
+      <div id="menu-palette"></div>
 
-    <div class="menu-input">
-      <select name="menu[recipe_ids][]">
-          <option value="">福菜は何にしますか？</option>
-        <% Recipe.where(side_dishes_id: 3).each do |dishe| %>
-          <option value=<%=dishe.id%>><%= dishe.cooking_name %></option>
-        <% end %>
-      </select>
-    </div>
+      <div id="menu-form" class="menu-none">
+        <select name="genre" id="genre">
+          <option disabled selected>料理のジャンルは？</option>
+          <option value="2">和食</option>
+          <option value="3">中華</option>
+          <option value="4">洋食</option>
+          <option value="5">その他</option>
+        </select>
 
-    <div class="menu-input">
-      <select name="menu[recipe_ids][]">
-          <option value="">福菜は何にしますか？</option>
-        <% Recipe.where(side_dishes_id: 3).each do |dishe| %>
-          <option value=<%=dishe.id%>><%= dishe.cooking_name %></option>
-        <% end %>
-      </select>
-    </div>
+        <select name="side-dishes" id="side-dishes">
+          <option disabled selected>おかずの種類は？</option>
+          <option value="2">主菜</option>
+          <option value="3">副菜</option>
+          <option value="4">汁物</option>
+          <option value="5">その他</option>
+        </select>
 
-    <div class="menu-input">
-      <select name="menu[recipe_ids][]">
-          <option value="">汁物は何にしますか？</option>
-        <% Recipe.where(side_dishes_id: 4).each do |dishe| %>
-          <option value=<%=dishe.id%>><%= dishe.cooking_name %></option>
-        <% end %>
-      </select>
-    </div>
+        <select name="cook-time" id="cook-time">
+          <option disabled selected>作る時間はどれぐらい？</option>
+          <option value="2">10分以内</option>
+          <option value="3">20分程度</option>
+          <option value="4">30分程度</option>
+          <option value="5">40分以上</option>
+        </select>
+
+        <div class="sort-btn" id="sort">料理を検索</div>
+      </div>
 
     <div class="submit" >
-      <%= form.submit %>
+      <%= form.submit "献立を確定する"%>
     </div>
   </div>
- <% end %>
+<% end %>
 </div>
+
 <%= render  "shared/footer" %>
