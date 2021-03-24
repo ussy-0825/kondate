@@ -2,7 +2,7 @@
   background-color: #fef4f4;
 }
 
-.menu-title {
+.calendar-name {
   height: 40px;
   margin-left: 30px;
   font-size: 20px;
@@ -16,7 +16,8 @@
   align-items: center;
 }
 
-.menu-make, .recipe-make {
+.menu-make, 
+.recipe-make {
   margin: 0 20px;
   padding: 20px;
   border: none;
@@ -43,4 +44,12 @@
 
 .calendar-heading {
   padding-bottom: 10px;
+}
+
+.day {
+  background-color: #ffffff;
+}
+
+.table-head {
+  background-color: #fffaf0;
 }
