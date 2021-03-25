@@ -20,7 +20,7 @@ function recipeSort() {
         cookTimeId = selectCookTime.options[cookTimeId].value;
     
         const XHR = new XMLHttpRequest();
-        XHR.open("GET", `http://localhost:3000/menus/sort?genre=${genreId}&sidedishes=${sideDishesId}&cooktime=${cookTimeId}`, true);
+        XHR.open("GET", `http://3.115.80.141/menus/sort?genre=${genreId}&sidedishes=${sideDishesId}&cooktime=${cookTimeId}`, true);
         XHR.responseType = "json";
         XHR.send();
         XHR.onload = () => {
