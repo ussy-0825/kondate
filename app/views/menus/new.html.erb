@@ -15,19 +15,20 @@
 
   <div class="menu-make-form">
     <div class="menu-input">
-      <%= form.label :献立の内容 %>
+      <%= form.label :献立をつくろう %>
     </div>
 
     <%= render "shared/error_message", model: form.object %>
 
       <div class="menu-input">
+        <p>献立を立てる日付を決めよう</p>
         <%= form.date_select :cook_date %>
       </div>
 
       <div id="menu-palette"></div>
 
       <div id="menu-form" class="menu-none">
-        <select name="genre" id="genre">
+        <select name="genre" id="genre" class="select-box">
           <option disabled selected>料理のジャンルは？</option>
           <option value="2">和食</option>
           <option value="3">中華</option>
@@ -35,7 +36,7 @@
           <option value="5">その他</option>
         </select>
 
-        <select name="side-dishes" id="side-dishes">
+        <select name="side-dishes" id="side-dishes" class="select-box">
           <option disabled selected>おかずの種類は？</option>
           <option value="2">主菜</option>
           <option value="3">副菜</option>
@@ -43,20 +44,17 @@
           <option value="5">その他</option>
         </select>
 
-        <select name="cook-time" id="cook-time">
+        <select name="cook-time" id="cook-time" class="select-box">
           <option disabled selected>作る時間はどれぐらい？</option>
           <option value="2">10分以内</option>
           <option value="3">20分程度</option>
           <option value="4">30分程度</option>
           <option value="5">40分以上</option>
         </select>
-
-        <div class="sort-btn" id="sort">料理を検索</div>
       </div>
 
-    <div class="submit" >
-      <%= form.submit "献立を確定する"%>
-    </div>
+      <div class="sort-btn" id="sort">料理を検索</div>
+      <div class="submit" ><%= form.submit "献立を確定する", class: "menu-make-btn"%></div>
   </div>
 <% end %>
 </div>

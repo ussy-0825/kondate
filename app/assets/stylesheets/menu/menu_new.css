@@ -4,7 +4,7 @@
 }
 
 .menu-make-form {
-  width: 400px;
+  width: 100%;
   margin: 0 auto;
   padding: 20px 0;
 }
@@ -12,6 +12,14 @@
 .menu-input {
   margin: 20px 0;
   text-align: center;
+}
+
+.menu-make-btn {
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #ed6d46;
+  color: #ffffff;
 }
 
 .submit {
@@ -34,11 +42,17 @@
   border: 1px none black;
   border-radius: 5px;
   background-color: #e7e7eb;
+  padding: 10px;
+  margin: 20px auto 20px;
 }
 
 #menu-form {
   margin-bottom: 20px;
   height:120%;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  width: 60%;
 }
 
 #modal-content{
@@ -90,10 +104,10 @@
 
 #menu-palette {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   width: 70%;
   text-align: center;
-  margin-bottom: 20px;
+  margin: 0 auto 20px;
 }
 
 .menu-data {
@@ -113,4 +127,11 @@
 #menu-list {
   display: flex;
   margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.select-box {
+  display: block;
+  margin: 5px;
+  padding: 10px;
 }
