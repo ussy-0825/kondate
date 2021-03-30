@@ -59,7 +59,7 @@
   text-align: center;
   top: 300px;
   width:700px;
-  top: calc(50% - 300px/2);
+  top: calc(50% - 500px/2);
   left:calc(50% - 700px/2);
   padding:10px 20px;
   border:2px solid #aaa;
