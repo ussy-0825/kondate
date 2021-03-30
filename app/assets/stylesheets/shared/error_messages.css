@@ -3,6 +3,8 @@
   width: 280px;
   padding-bottom: 10px;
   color: red;
+  list-style: none;
+  text-align: center;
 }
 
 .user-error-title {

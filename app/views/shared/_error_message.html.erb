@@ -2,7 +2,11 @@
 <div class="error-alert">
   <ul>
     <% model.errors.full_messages.each do |message| %>
-    <li class='error-message'><%= message %></li>
+      <% if message = "メインを選択してください"%>
+        <li class='error-message'>料理が選択されていません</li>
+        <% else %>
+        <li class='error-message'><%= message %></li>
+      <% end %>
     <% end %>
   </ul>
 </div>
