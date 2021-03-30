@@ -16,10 +16,11 @@
     <% all.each do |i| %>
       <div>
         <ul class="menu-day">
-          <% 4.times do |n| %>
-          <% name = Recipe.find(i.menus_recipes[n].recipe_id)%>
-          <li><%= link_to name.cooking_name, recipe_path(name.id), class: "cook-name" %></li>
-          <% end %>
+          <% menu = i.menus_recipes %>
+          <% menu.each do |n| %>
+            <% name = Recipe.find(n.recipe_id) %>
+            <li><%= link_to name.cooking_name, recipe_path(name.id), class: "cook-name" %></li>
+          <% end %> 
         </ul>
       </div>
     <% end %>
