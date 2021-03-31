@@ -11,6 +11,14 @@ RSpec.describe Menu, type: :model do
         expect(@menu).to be_valid
       end
     end
+  
+    context '献立作成が上手くいかない時' do
+      it "料理が選択されていない時、作成できない" do
+        @menu.main = nil
+        @menu.valid?
+        expect(@menu.errors.full_messages).to include("メインを選択してください")
+      end
+    end
   end
 
 end
