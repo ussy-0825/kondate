@@ -2,6 +2,7 @@ if (document.URL.match( "/menus/new" )) {
   window.addEventListener("load", recipeSort);
   window.addEventListener("load", addMenu);
   window.addEventListener("load", closeModal);
+  window.addEventListener("load", deleteMenu);
 }
 
 function recipeSort() {
@@ -57,22 +58,66 @@ function addMenu() {
   addMenuEvent.addEventListener("mouseenter", () => {
     let menu = document.querySelectorAll(".menu-data");
     menu.forEach(function(list) {
-      list.addEventListener('click', (e) => {
-      const selectMenu = e.currentTarget;
-      let menuPalette = document.getElementById("menu-palette");
-      menuPalette.appendChild(selectMenu);
+      list.addEventListener('click', addMenus);
+      function addMenus(e) {
+        const selectMenu = e.currentTarget;
+        selectMenu.removeEventListener('click', addMenus);
 
-      let hideInput = document.getElementById("hide-input");
-      let input = document.createElement('input');
-      input.setAttribute("name", "menu[recipe_ids][]");
-      input.setAttribute("value", e.target.id);
-      hideInput.appendChild(input);
-      $("#modal-overlay").css('display','none');
-      let menuList = document.getElementById("menu-list");
-      let menuData = document.querySelectorAll(".menu-data");
-      while(menuList.lastChild){
-        menuList.removeChild(menuList.lastChild);
-      }
+        let menuClose = document.createElement('div');
+        menuClose.setAttribute("class", "menu-data-close");
+        menuClose.appendChild(selectMenu);
+
+        let closeBtn = document.createElement('div');
+        closeBtn.setAttribute("class", "close-btn");
+        closeBtn.innerHTML = "×";
+        menuClose.appendChild(closeBtn);
+
+        let menuPalette = document.getElementById("menu-palette");
+        menuPalette.appendChild(menuClose);
+
+        let hideInput = document.getElementById("hide-input");
+        let input = document.createElement('input');
+        input.setAttribute("name", "menu[recipe_ids][]");
+        input.setAttribute("class", "order");
+        input.setAttribute("value", e.target.id);
+        hideInput.appendChild(input);
+
+        $("#modal-overlay").css('display','none');
+
+        let changeClass = document.querySelectorAll(".menu-data");
+        changeClass.forEach(function(list) {
+          list.classList.remove('menu-data');
+          list.classList.add('menu-palette-data');
+        });
+
+        let menuList = document.getElementById("menu-list");
+          while(menuList.lastChild){
+            menuList.removeChild(menuList.lastChild);
+          };
+      };
+    });
+  });
+}
+
+function deleteMenu() {
+  const menuPalette = document.getElementById("menu-palette");
+  menuPalette.addEventListener("mouseover", () => {
+    let closeBtn = document.querySelectorAll(".close-btn");
+    closeBtn.forEach(function(list) {
+      list.addEventListener('click', (e) => {
+        const clickMenu = e.target;
+        const deleteMenu = clickMenu.parentNode;
+        deleteMenu.remove();
+
+        const deleteMenuFirstChild = deleteMenu.firstChild;
+        const deleteMenuLastChild = deleteMenuFirstChild.lastChild;
+
+        let input = document.querySelectorAll(".order");
+        input.forEach(function(list) {
+          if (list.value ==  deleteMenuLastChild.id) {
+            list.remove();
+          }
+        });
       });
     });
   });

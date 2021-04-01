@@ -121,6 +121,24 @@
   background-color: #ffffff;
 }
 
+.menu-palette-data {
+  width: 200px;
+  border: 1px solid gray;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 5px;
+  background-color: #ffffff;
+}
+
+.close-btn {
+  border: 1px solid black;
+  border-radius: 3px;
+  padding: 0px 2px 0px;
+  background-color: #dcd6d9;
+  width: 10px;
+  margin: 0 auto;
+}
+
 .menu-title {
   margin: 0 auto;
   height: 30px;
