@@ -1,12 +1,16 @@
 .menu-new-content {
   width: 100%;
   background-color: #fef4f4;
+  padding: 20px;
 }
 
 .menu-make-form {
   width: 100%;
   margin: 0 auto;
   padding: 20px 0;
+  width: 85%;
+  border-radius: 20px;
+  background-color: #ffffff;
 }
 
 .menu-input {
@@ -155,4 +159,6 @@
   display: block;
   margin: 5px;
   padding: 10px;
+  background-color: #e7e7eb;
+  border-radius: 5px;
 }
