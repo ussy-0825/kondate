@@ -4,6 +4,7 @@
   <div class="menu-recipe">
     <div class="menu-make"><%= link_to '献立を立てる', new_menu_path, class: "menu" %></div>
     <div class="recipe-make"><%= link_to 'レシピを投稿する', new_recipe_path, class: "recipe" %></div>
+    <div class="my-recipe"><%= link_to '投稿したレシピ一覧', recipes_path(current_user.id), class: "myrecipe" %></div>
   </div>
 
   <div class="calendar-name">

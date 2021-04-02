@@ -1,0 +1,31 @@
+.my-recipe-content {
+  width: 100%;
+  background-color: #fef4f4;
+  padding: 20px;
+} 
+
+.my-recipe-warper {
+  background-color: #ffffff;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.myrecipe-menuname {
+  text-decoration: none;
+}
+
+.my-recipe-data {
+  margin: 5px;
+  text-align: center;
+}
+
+.my-recipe-title {
+  width: 200px;
+  margin: 0 auto 20px;
+  text-align: center;
+}

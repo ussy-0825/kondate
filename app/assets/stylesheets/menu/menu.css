@@ -17,7 +17,8 @@
 }
 
 .menu-make, 
-.recipe-make {
+.recipe-make,
+.my-recipe {
   margin: 0 20px;
   padding: 20px;
   border: none;
@@ -26,7 +27,8 @@
 }
 
 .menu, 
-.recipe {
+.recipe,
+.myrecipe {
   text-decoration: none;
 }
 

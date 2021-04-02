@@ -1,0 +1,13 @@
+<%= render  "shared/header" %>
+<div class="my-recipe-content">
+  <div class="my-recipe-title">投稿したレシピ一覧</div>
+    <div class="my-recipe-warper">
+      <% @recipes.each do |recipe| %>
+      <div class="my-recipe-data">
+        <div><%= link_to recipe.cooking_name, recipe_path(recipe.id), class: "myrecipe-menuname" %></div>
+        <div><%= image_tag(recipe.image.variant(resize:"300x200")) %></div>
+      </div>
+      <% end %>
+    </div>
+</div>
+<%= render  "shared/footer" %>

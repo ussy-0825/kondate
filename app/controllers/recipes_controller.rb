@@ -3,7 +3,7 @@ class RecipesController < ApplicationController
   before_action :access_check, only:[:edit, :update]
 
   def index
-    redirect_to new_recipe_path
+    @recipes = Recipe.where(user_id: current_user.id)
   end
 
   def new
