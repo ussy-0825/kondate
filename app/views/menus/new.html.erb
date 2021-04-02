@@ -49,6 +49,49 @@
       <div class="submit" ><%= form.submit "献立を確定する", class: "menu-make-btn"%></div>
   </div>
 <% end %>
+
+  <div class="lecture-contents">
+    <div class="lecture-title-box">
+      <div class="lecture-title">
+        アプリ「kondate」で献立を作成する方法
+      </div>
+    </div>
+    <div class="lecture-content">
+      <div class="lecture-text">
+        1.料理のジャンル、おかずの種類を選択し、「料理を検索」
+      </div>
+      <div class="lecture-img">
+        <%= image_tag 'lecture1.png', width: '100%', height: '100%' %>
+      </div>
+    </div>
+    <div class="lecture-content">
+      <div class="lecture-text">
+        2.表示される料理を選択
+      </div>
+      <div class="lecture-img">
+        <%= image_tag 'lecture2.jpg', width: '100%', height: '100%' %>
+      </div>
+    </div>
+    <div class="lecture-content">
+      <div class="lecture-text">
+        3.選択した料理が右の画像のように表示されます
+      </div>
+      <div class="lecture-img">
+        <%= image_tag 'lecture3.png', width: '100%', height: '100%' %>
+      </div>
+    </div>
+    <div class="lecture-content">
+      <div class="lecture-text">
+        4.①〜③を繰り返し、好みの献立を作り「献立を確定する」をクリック。
+          マイページのカレンダーに作成した献立が登録されます。<br>
+          ※現状、1度に追加できる料理の数は4つまでとなっています。
+      </div>
+      <div class="lecture-img">
+        <%= image_tag 'lecture4.jpg', width: '100%', height: '100%' %>
+      </div>
+    </div>
+  </div>
+
 </div>
 
 <%= render  "shared/footer" %>

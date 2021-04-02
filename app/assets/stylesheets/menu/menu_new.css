@@ -131,7 +131,7 @@
   padding: 10px;
   border-radius: 10px;
   margin: 5px;
-  background-color: #ffffff;
+  background-color: #fde8d0;
 }
 
 .close-btn {
@@ -161,4 +161,39 @@
   padding: 10px;
   background-color: #e7e7eb;
   border-radius: 5px;
+}
+
+.lecture-title-box {
+  margin: 0 auto;
+  width: 400px;
+  padding: 40px 0 10px 0;
+  text-align: center;
+}
+
+.lecture-title {
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #ffffff;
+}
+
+
+
+.lecture-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+}
+
+.lecture-text {
+  width: 50%;
+  font-size: 18px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.lecture-img {
+  width: 40%;
 }
