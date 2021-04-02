@@ -12,3 +12,7 @@
 .registrations-name {
   margin-bottom: 10px;
 }
+
+#flash_alert {
+  color: red;
+}

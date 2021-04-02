@@ -1,5 +1,8 @@
 <%= render  "shared/header" %>
 <div class="session-content">
+  <div class="registrations-text">
+    アプリ「kondate」で献立を簡単につくってみよう！
+  </div>
   <h2 class="session-title">ログイン</h2>
 
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -30,7 +33,7 @@
     </div>
   <% end %>
 </div>
-<div class="user-help">
+<%# <div class="user-help">
   <%= render "devise/shared/links" %>
-</div>
+<%# </div> %> 
 <%= render  "shared/footer" %>
