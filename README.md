@@ -1,5 +1,5 @@
 ## kondate
-
+<img width="1440" alt="READEME用" src="https://user-images.githubusercontent.com/78068541/113428575-01799700-9412-11eb-9b75-849b0fbb0883.png">
 
 ## 概要
 献立を立てる事ができるアプリです。
