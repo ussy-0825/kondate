@@ -16,12 +16,12 @@ function recipeSort() {
         let sideDishesId = selectSideDishes.selectedIndex;
         sideDishesId = selectSideDishes.options[sideDishesId].value;
     
-        let selectCookTime = document.getElementById("cook-time");
-        let cookTimeId = selectCookTime.selectedIndex;
-        cookTimeId = selectCookTime.options[cookTimeId].value;
+        // let selectCookTime = document.getElementById("cook-time");
+        // let cookTimeId = selectCookTime.selectedIndex;
+        // cookTimeId = selectCookTime.options[cookTimeId].value;
     
         const XHR = new XMLHttpRequest();
-        XHR.open("GET", `/menus/sort?genre=${genreId}&sidedishes=${sideDishesId}&cooktime=${cookTimeId}`, true);
+        XHR.open("GET", `/menus/sort?genre=${genreId}&sidedishes=${sideDishesId}`, true);
         XHR.responseType = "json";
         XHR.send();
         XHR.onload = () => {

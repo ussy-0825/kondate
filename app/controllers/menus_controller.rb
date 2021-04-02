@@ -21,7 +21,7 @@ class MenusController < ApplicationController
   end
 
   def sort
-    @recipe = Recipe.where(genre_id: params[:genre]).where(side_dishes_id: params[:sidedishes]).where(cook_time_id: params[:cooktime])
+    @recipe = Recipe.where(genre_id: params[:genre]).where(side_dishes_id: params[:sidedishes])
     render :sort
   end
 
