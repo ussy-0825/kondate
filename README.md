@@ -24,6 +24,8 @@ http://3.115.80.141/
 
 password：testpass
 
+### 利用方法
+[![Image from Gyazo](https://i.gyazo.com/777ab2f73953bdb6b0dd4a395ff9c5ac.gif)](https://gyazo.com/777ab2f73953bdb6b0dd4a395ff9c5ac)
 
 ## usersテーブル
 
