@@ -24,7 +24,7 @@ http://3.115.80.141/
 
 password：testpass
 
-### 利用方法
+## 利用方法
 １・テストアカウントにてログイン
 
 ２・日付、料理のジャンル、おかずの種類を設定し料理を検索。好みの料理を選択。
@@ -33,7 +33,10 @@ password：testpass
 ３・２を繰り返して好みの献立を作れます。
 [![Image from Gyazo](https://i.gyazo.com/d0bca03a7ad58305d0956954c67d43fd.gif)](https://gyazo.com/d0bca03a7ad58305d0956954c67d43fd)
 
-## usersテーブル
+## データベース設計
+[![Image from Gyazo](https://i.gyazo.com/b464847bf416fddb3ad73000c5608ace.png)](https://gyazo.com/b464847bf416fddb3ad73000c5608ace)
+
+### usersテーブル
 
 | Column                 | Type       | Options     |
 | ---------------------- | ---------- | ----------- |
@@ -45,7 +48,7 @@ password：testpass
 - has_many :recipes
 - has_many :menus
 
-## recipes
+### recipes
 
 | Column                 | Type       | Options                        |
 | ---------------------- | ---------- | ------------------------------ |
@@ -62,7 +65,7 @@ password：testpass
 - has_many :menus_recipes
 - has_many :menus, through: :menus_recipes
 
-## menus
+### menus
 
 | Column                 | Type       | Options                        |
 | ---------------------- | ---------- | ------------------------------ |
@@ -77,7 +80,7 @@ password：testpass
 - has_many :menus_recipes
 - has_many :recipes, through: :menus_recipes
 
-## menus_recipes
+### menus_recipes
 
 | Column                 | Type       | Options                        |
 | ---------------------- | ---------- | ------------------------------ |
