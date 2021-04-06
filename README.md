@@ -1,5 +1,5 @@
 ## kondate
-<img width="1440" alt="READEME用" src="https://user-images.githubusercontent.com/78068541/113428575-01799700-9412-11eb-9b75-849b0fbb0883.png">
+[![Image from Gyazo](https://i.gyazo.com/89c86b99d360bf71c7ddc22820db422f.png)](https://gyazo.com/89c86b99d360bf71c7ddc22820db422f)
 
 ## 概要
 献立を考える時、同じようなメニューしか思いつかなかったり、
