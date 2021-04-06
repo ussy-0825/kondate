@@ -16,6 +16,9 @@
     <%= date.day %>
     <% all.each do |i| %>
       <div>
+        <div class="delete-btn">
+          <%= link_to '献立を削除', menu_path(i.id), method: :delete, class: "menu-delete" %>
+        </div>
         <ul class="menu-day">
           <% menu = i.menus_recipes %>
           <% menu.each do |n| %>

@@ -20,6 +20,12 @@ class MenusController < ApplicationController
     end
   end
 
+  def destroy
+    menu = Menu.find(params[:id])
+    menu.destroy
+    redirect_to root_path
+  end
+
   def sort
     @recipe = Recipe.where(genre_id: params[:genre]).where(side_dishes_id: params[:sidedishes])
     render :sort

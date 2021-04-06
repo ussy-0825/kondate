@@ -55,3 +55,18 @@
 .table-head {
   background-color: #fffaf0;
 }
+
+.menu-delete {
+  text-decoration: none;
+  font-size: 10px;
+  vertical-align: 0.2em;
+}
+
+.delete-btn {
+  border: 1px solid black;
+  background-color: #DDD;
+  display: inline-block;
+  border-radius: 5px;
+  padding: 0 5px;
+  margin-bottom: 5px;
+}
