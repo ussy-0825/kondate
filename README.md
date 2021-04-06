@@ -30,7 +30,7 @@ password：testpass
 [![Image from Gyazo](https://i.gyazo.com/777ab2f73953bdb6b0dd4a395ff9c5ac.gif)](https://gyazo.com/777ab2f73953bdb6b0dd4a395ff9c5ac)
 
 ３・２を繰り返して好みの献立を作れます。
-[![Image from Gyazo](https://i.gyazo.com/d0bca03a7ad58305d0956954c67d43fd.gif)](https://gyazo.com/d0bca03a7ad58305d0956954c67d43fd)
+[![Image from Gyazo](https://i.gyazo.com/b98e012b7135eb0311e6e1ba485f7403.gif)](https://gyazo.com/b98e012b7135eb0311e6e1ba485f7403)
 
 ## 工夫したポイント
 操作性を高める為、条件指定をして料理を検索させる処理は非同期通信で行えるようにしています。
