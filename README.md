@@ -37,14 +37,14 @@ password：testpass
 
 ## 使用技術
 
-・Ruby 2.6.5
-・Ruby on Rails 6.0.3.5
-・mysql 5.6
-・Nginx
-・unicorn
-・AWS
-　　-EC2
-・capistrano 3.16
+・Ruby 2.6.5  
+・Ruby on Rails 6.0.3.5  
+・mysql 5.6  
+・Nginx  
+・unicorn  
+・AWS  
+　　-EC2  
+・capistrano 3.16  
 ・Rspec
 
 ## データベース設計
