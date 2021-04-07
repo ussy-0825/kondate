@@ -35,6 +35,18 @@ password：testpass
 ## 工夫したポイント
 操作性を高める為、条件指定をして料理を検索させる処理は非同期通信で行えるようにしています。
 
+## 使用技術
+
+・Ruby 2.6.5
+・Ruby on Rails 6.0.3.5
+・mysql 5.6
+・Nginx
+・unicorn
+・AWS
+　　-EC2
+・capistrano 3.16
+・Rspec
+
 ## データベース設計
 [![Image from Gyazo](https://i.gyazo.com/b464847bf416fddb3ad73000c5608ace.png)](https://gyazo.com/b464847bf416fddb3ad73000c5608ace)
 
