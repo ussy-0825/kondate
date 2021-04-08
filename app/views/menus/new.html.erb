@@ -19,7 +19,11 @@
     <%#</div> %>
 
     <%= render "shared/error_message", model: form.object %>
-    <div class="error-text"><%= flash[:notice] %></div>
+    <% if flash[:notice] == "料理が選択されていません" %>
+    <div class="error-text">
+    <%= flash[:notice] %>
+    </div>
+    <% end %>
 
       <div class="menu-input">
         <p>献立を立てる日付を決めよう</p>
