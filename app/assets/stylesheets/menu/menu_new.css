@@ -197,3 +197,9 @@
 .lecture-img {
   width: 40%;
 }
+
+.error-text {
+  margin: 0 auto;
+  width: 200px;
+  color: red;
+}

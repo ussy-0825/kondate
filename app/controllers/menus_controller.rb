@@ -16,7 +16,8 @@ class MenusController < ApplicationController
     if @menu.save
       redirect_to root_path
     else
-      render :new
+      flash[:notice] = "料理が選択されていません"
+      redirect_to new_menu_path
     end
   end
 

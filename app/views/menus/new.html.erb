@@ -19,6 +19,7 @@
     <%#</div> %>
 
     <%= render "shared/error_message", model: form.object %>
+    <div class="error-text"><%= flash[:notice] %></div>
 
       <div class="menu-input">
         <p>献立を立てる日付を決めよう</p>
