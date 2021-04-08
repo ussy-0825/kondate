@@ -46,6 +46,7 @@ password：testpass
 　　-EC2  
 ・capistrano 3.16  
 ・Rspec
+・Rubocop
 
 ## データベース設計
 [![Image from Gyazo](https://i.gyazo.com/b464847bf416fddb3ad73000c5608ace.png)](https://gyazo.com/b464847bf416fddb3ad73000c5608ace)
