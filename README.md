@@ -45,7 +45,7 @@ password：testpass
 ・AWS  
 　　-EC2  
 ・capistrano 3.16  
-・Rspec
+・Rspec 
 ・Rubocop
 
 ## データベース設計
