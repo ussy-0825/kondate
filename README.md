@@ -27,7 +27,7 @@ password：testpass
 １・テストアカウントにてログイン
 
 ２・日付、料理のジャンル、おかずの種類を設定し料理を検索。好みの料理を選択。
-[![Image from Gyazo](https://i.gyazo.com/777ab2f73953bdb6b0dd4a395ff9c5ac.gif)](https://gyazo.com/777ab2f73953bdb6b0dd4a395ff9c5ac)
+[![Image from Gyazo](https://i.gyazo.com/1dd0d0b40a89b185d5eabe69bb8421cf.gif)](https://gyazo.com/1dd0d0b40a89b185d5eabe69bb8421cf)
 
 ３・２を繰り返して好みの献立を作れます。
 [![Image from Gyazo](https://i.gyazo.com/b98e012b7135eb0311e6e1ba485f7403.gif)](https://gyazo.com/b98e012b7135eb0311e6e1ba485f7403)
